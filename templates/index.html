@@ -20,10 +20,10 @@
     {% endif %}
   {% endwith %}
 
-	<form action='/users' method='post'>
-		First Name: <input type='text' name='first_name'><br>
-		Last Name: <input type='text' name='last_name'><br>
-		Email: <input type='text' name='email'><br>
+	<form action='/submission' method='post'>
+		First Name: <input type='text' name='first_name' value="{{first}}"><br>
+		Last Name: <input type='text' name='last_name' value="{{last}}"><br>
+		Email: <input type='text' name='email' value="{{mail}}"><br>
 		Password: <input type='password' name='password'><br>
 		Confirm Password: <input type='password' name='pass_conf'><br>
 	<input type='submit' value='Submit Form'>
