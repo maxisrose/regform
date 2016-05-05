@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regristration Form</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+	<form action='/users' method='post'>
+		First Name: <input type='text' name='first_name'><br>
+		Last Name: <input type='text' name='last_name'><br>
+		Email: <input type='text' name='email'><br>
+		Password: <input type='password' name='password'><br>
+		Confirm Password: <input type='password' name='pass_conf'><br>
+	<input type='submit' value='Submit Form'>
+</form>
+
+</body>
+</html>
